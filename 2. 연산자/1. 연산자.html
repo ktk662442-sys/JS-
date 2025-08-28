@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+
+    <script>
+        // 1. 산술연산자
+        // let num1 = 10;
+        // let num2  = 20;
+
+        // let sum = num1 + num2;
+        // let miuns = num1 - num2;
+        // let multiple = num1 * num2;
+        // let dicide = num1 / num2;
+        // let remaindex = num1 % num2;
+        // let square = num1 ** num2 // '**' = 제곱
+
+        // console.log(sum,miuns,multiple,dicide,remaindex,square);
+
+        console.log('----------------------------------------------')
+
+        // text_1
+        // let num3 = Number(prompt('숫자입력'));
+        // let num4 = 4;
+
+        // console.log(num3 / num4, num3 + num4);
+
+
+        console.log('----------------------------------------------')
+
+
+        // 2. 증감연산자
+        // (1) 전위 연산자
+        // let x = 1;
+        // console.log(x);
+
+        // y = ++x;
+        // console.log(x,y);
+
+        // y = --x;
+        // console.log(x,y);
+
+        // (2) 후위 연산자
+        // let x = 1;
+        // y = x++;
+
+        // console.log(x,y);
+
+        // y = x--;
+        // console.log(x,y);
+
+
+        console.log('----------------------------------------------')
+
+
+        // 3. 비교연산자
+        // let x = 1; 
+        // let y = 2;
+        // let z = '1';
+
+        // console.log(x == y);
+        // console.log(x == z); // 값으로 비교하여 true가 나온다
+        // console.log(x === z); // 타입으로 비교하여 false가 나온다
+
+        // console.log(x != y); // 같지 않다
+        // console.log(x !== y);
+
+        // console.log(x > y); // false
+        // console.log(x < y); // true
+        // console.log(x >= y); // false
+        // console.log(x <= y); // true
+
+
+        console.log('----------------------------------------------')
+
+
+        // 4.할당연산자
+        // let a = 3;
+        // let b = 2;
+
+        // console.log(a += b); // a = a + b
+        // console.log(a -= b); // a = a - b
+        // console.log(a *= b); // a = a * b
+        // console.log(a /= b); // a = a / b
+        // console.log(a %= b); // a = a % b  
+
+
+        console.log('----------------------------------------------')
+
+        
+        // 5. 삼항연산자
+        // let a = 3;
+        // let b = 2;
+        // console.log(a > b ? 'a가 b보다 크다' : 'a가 b보다 작다'); // 조건 ? 참일 때 : 거짓일 때
+
+
+        console.log('----------------------------------------------')
+
+
+
+        // 6. 논리연산자
+        /*
+            &&(and) : 둘 다 참(true)일 때 참(true) / 하나라도 거짓(false)일 때 거짓(false)
+            ||(or) : 둘 중 하나라도 참(true)일 때 참(true) / 둘 다 거짓(false)일 때 거짓(false)
+            !(not) : 참(true)을 거짓(false)로, 거짓(false)을 참(true)로 바꿉니다.
+            
+            
+            논리연산자는 주로 조건문에서 사용됩니다.
+            &&와 ||는 단축 평가(short-circuit evaluation)를 지원합니다.
+            즉, &&는 첫 번째 거짓을 만나면 그 값을 반환하고, ||는 첫 번째 참을 만나면 그 값을 반환합니다.
+            예를 들어, true && false는 false를 반환하고, true || false는 true를 반환합니다.
+            또한, &&와 ||는 피연산자의 타입에 따라 동작할 수 있습니다.
+            예를 들어, true && 'Hello'는 'Hello'를 반환하고, false || 'Hello'는 'Hello'를 반환합니다.
+            이러한 특성은 논리연산자를 사용할 때 유용합니다.
+            예를 들어, 조건문에서 &&를 사용하여 여러 조건을 동시에 검사하거나,
+            ||를 사용하여 기본값을 설정할 수 있습니다.      
+        */
+
+        // console.log(true && true); // true
+        // console.log(true || true); // true
+        // console.log(true && false); // false
+        // console.log(false && false); // false
+
+        
+
+        // console.log(10 > 1 && 20 > 2); // true
+        // console.log(10 < 1 && 20 > 2); // false
+        // console.log(10 < 1 || 20 > 2); // true
+        // console.log(10 < 1 || 20 < 2); // false
+
+
+        console.log('----------------------------------------------')
+
+
+        // 7. 단축평가(short-circuit evaluation) : 표현식을 평가하는 도중에 평가 결과가 확정된 경우 나머지 평가 과정을 생략하는 것
+        /*
+            && : 좌측이 true면 우측값 반환
+            && : 좌측이 false면 좌측값 반환
+
+            || : 좌측이 true이면 좌측값을 반환
+            || : 좌측이 false이면 우측값을 반환
+        */
+
+        // console.log(true && '김정재'); // '김정재'
+        // console.log(false && '김정재'); // false
+
+        //  console.log(true || '김정재'); // true
+        // console.log(false || '김정재'); // '김정재'
+
+        console.log('----------------------------------------------')
+
+        // 8. 비트연산자 : 비트 단위로 연산을 수행합니다.
+        // let a = 5; // 0101
+        // let b = 3; // 0011
+
+        // console.log(a & b); // AND 연산: 0001 (1)
+        // console.log(a | b); // OR 연산: 0111 (7)
+        // console.log(a ^ b); // XOR 연산: 0110 (6)
+        // console.log(~a);    // NOT 연산: -6 (보수)
+
+        console.log('----------------------------------------------')
+        
+        // text_1
+        // let c = 3
+        // let d = c++;
+        // let e = ++c;
+
+        // console.log(c,d,e); // c: 5, d: 3, e: 5
+        
+
+        // text_2
+        // let isAdult = true;
+        // let hasPermission = false; 
+        // let canAccess = isAdult && hasPermission || !isAdult; // AND 연산
+
+        // console.log(canAccess); // false
+
+        console.log('----------------------------------------------')
+
+        // text_3
+        let score = 10;
+
+        score += 5; // 15
+        score -= 2; // 13
+        score *= 4; // 52
+
+        console.log(score); // 52
+    </script>
+    
+</body>
+</html>
