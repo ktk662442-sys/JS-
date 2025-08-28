@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열요소 검색(indexOf,lastIndexOf,includes)</title>
+</head>
+<body>
+
+    <!-- 
+        배열요소 검색
+        1. 변수명.indexOf(검색데이터,찾을 변수 시작위치)
+        = 요소의 인덱스 위치 검색
+        = 대소문자 구분해서 없으면 즉 배열안에 없는거면 -1이 출력
+
+        2. 변수명.lastIndexOf(검색데이터,찾을 변수시작위치)
+        = 끝에서부터 요소 위치를 검색
+        = 뒤에서 앞으로(역방향) 찾는 메서드
+
+        3. 변수명.includes(검색데이터,찾을 변수시작위치)
+        = 요소의 포함 여부를 확인
+        = 'true'/'false'으로 출력 
+    -->
+
+    <script>
+        const arr = ['apple','banana', 'orange', 'grape'];
+
+        // document.write(arr.indexOf('banana') + '<br>'); // 1 = 인덱스 순서 기준 '1'순서에 'banana'가 있다
+        // document.write(arr.lastIndexOf('grape') + '<br>'); // 3 : '3'순서에 'grape'가 있다
+        // document.write(arr.includes('tomato')); // false : 배열에 없기 때문에 / true : 배열에 찾는것이 있을 경우
+
+        // document.write(arr.indexOf('apple',2))
+        // document.write(arr.lastIndexOf('banana', 0));
+        document.write(arr.includes('appled'));
+    </script>
+    
+</body>
