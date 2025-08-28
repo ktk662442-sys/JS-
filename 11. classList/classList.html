@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .text{
+            color : red;
+        }
+        
+
+        .title{
+            color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        classList
+        = 요소.classList.메소드  : 웹 요소부터 클래스 콜렉션을 반환하는 읽기 전용 속성
+        => html 요소의 클래스를 추가, 삭제, 제거, 토글할 수 있게 도와주는 DOM 속성
+
+        <요소>
+        add() : 클래스 속성을 추가, 같은 클래스명이 있는 경우 무시
+        remove() : 클래스 속성을 제거, 없는 경우 무시
+        toggle() : 클래스 속성을 있으면 없애고 없으면 추가
+        contains() : 해다 요소의 클래스의 유무를 확인하여 해당 클래스가 있으면'true' 없으면 'false'로 반환
+        replace() : 어떤 특정한 글자나 단어를 찾아서, 다른 글자나 단어로 바꾸고 싶을 때 사용 / 글자 바꾸기 놀이
+    -->
+
+    
+    <!-- <div class="class1">클래스</div> -->
+
+
+
+    <!-- text_2 -->
+        <h1>classList</h1>
+        <button id="add">add</button>
+        <button id="remove">remove</button>
+        <button id="toggle">toggle</button>
+        <button id="contains">contains</button>
+        <button id="replace">replace</button>
+
+
+
+
+
+    <script>
+        // const elem = document.querySelector('.class1')
+        // // elem.classList.add('class2')
+        // // elem.classList.remove('class2')
+        // console.log(elem.classList.contains('class2'))
+
+
+        // text_1 클래스 속성을 class1 -> class2 바꾸기
+
+        // const elem = document.querySelector('.class1');
+        // elem.classList.replace('class1','class3');
+
+
+
+        // text_2 : 각요소를 클리하여 
+        const title = document.querySelector('h1');
+        const addBtn = document.getElementById('add');
+        const removeBtn = document.getElementById('remove');
+        const toggleBtn = document.getElementById('toggle');
+        const containsBtn = document.getElementById('contains');
+        const replaceBtn = document.getElementById('replace');
+
+          addBtn.addEventListener('click', () => {
+                title.classList.add('text');
+            });
+
+            removeBtn.addEventListener('click', () => {
+                title.classList.remove('text');
+            });
+
+            toggleBtn.addEventListener('click', () => {
+                title.classList.toggle('text');
+            });
+
+            containsBtn.addEventListener('click', () => {
+                if(title.classList.contains('text')) {
+                    console.log('있음');
+                } else {
+                    console.log('없음');
+                }
+            });
+
+            replaceBtn.addEventListener('click', () => {
+                title.classList.replace('text', 'title');
+            });
+    </script>
+    
+</body>
+</html>
