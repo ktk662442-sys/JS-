@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스위치 문</title>
+</head>
+<body>
+
+    <!-- 
+        switch : 조건문에서 'if'의 포지션
+        case : 조건에 해당하는 값 : 'else if' 포지션
+        break : 조건에 해당하는 값이 실행된 후 종료
+        default : 모든 조건에 해당하지 않을 때 실행되는 코드 / 'else'문의 포지션
+
+        switch
+        = 변수의 값에 따라 여러 조건을 검사하고 해당 조건에 맞는 코드를 실행한다 
+
+        switch(조건식){
+            case_1(조건값) :
+                // 실행코드
+                break;
+            
+            case_2(조건값) :
+                // 실행코드
+                break;
+
+            case_3(조건값) :
+                // 실행코드
+                break;
+            
+            default : 
+                // 모든 조건에 해당하지 않을 때 실행할 코드
+                break
+        }
+    -->
+
+    <script>
+        // text_1 과일이름
+        // let fruit = prompt('과일이름을 적으세요');
+
+        // switch(fruit){
+        //     case '귤' : 
+        //         console.log('귤입니다')
+        //         break;
+
+        //     case '사과' : 
+        //         console.log('사과입니다')
+        //         break;
+
+        //     default : 
+        //         console.log(`${fruit}입니다`)
+        //         break;
+        // }
+
+        // let furit = prompt('과일이름을 적으세요');
+
+        // switch(furit){
+        //     case '사과' : 
+        //         alert('사과입니다')
+        //         break;
+            
+        //     case '귤' : 
+        //         alert('귤입니다')
+        //         break;
+
+        //     default : 
+        //         alert(`${furit}입니다`)
+        //         break;
+        // }
+
+
+
+        // text_2 홀,짝
+        // let num = Number(prompt('숫자입력'));
+
+        // switch(num % 2){
+        //     case 0 : 
+        //         console.log('짝수');
+        //         break;
+            
+        //     case 1 : 
+        //         console.log('홀수');
+        //         break;
+        // }
+
+        let user = Number(prompt('숫자입력'));
+
+        switch(user % 2){
+            case 0 :
+                alert('짝수')
+                break;
+
+            default : 
+                alert('홀수')
+                break; 
+        }
+    </script>
+    
+</body>
+</html>

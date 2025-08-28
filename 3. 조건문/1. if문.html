@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+</head>
+<body>
+
+    <!-- 
+        조건문 : 조건을 만족하는 데이터를 처리하고 싶을 때
+
+        1. if ~ else문
+        if(조건식_1){   // 'true'일 때 실행 'false'일 때 다음으로 넘어간다
+            처리_1
+        }else {
+            처리_2
+        }
+
+        2. if ~ else  if ~ else문
+        if(조건식_1){
+            처리_1
+        }else if(조건식_2){
+            처리_2
+        }else{
+            처리_3
+        }
+    -->
+
+
+    <script>
+        // text_1 '홀,짝'판별
+        // let num = 11
+
+        // if(num % 2 == 0){
+        //     console.log('짝수');
+        // }else{
+        //     console.log('홀수');
+        // }
+
+    //    let num = 12;
+
+    //    if(num % 2 == 0){
+    //         document.write('짝수')
+    //    }else{
+    //         document.write('홀수')
+    //    }
+
+
+
+        // text_2 클라이언트에게 입력값을 받아 '2,3,4'의 배수
+        // let num = Number(prompt('숫자를 입력'));
+
+        // if(num % 4 == 0){
+        //     console.log('4의 배수');
+        // }else if(num % 3 == 0){
+        //     console.log('3의 배수')
+        // }else if( num % 2 == 0){
+        //     console.log('2의 배수')
+        // }else{
+        //      console.log('배수가 아닙니다');
+        // }
+
+        // let user = Number(prompt('숫자입력'));
+
+        // if(user % 4 === 0){
+        //     document.write('4의 배수')
+        // }else if(user % 3 === 0){
+        //     document.write('3의 배수')
+        // }else if(user % 2 === 0){
+        //     document.write('2의 배수')
+        // }else{
+        //     document.write('배수가 아닙니다')
+        // }
+
+
+
+        // text_3 걸음 수 6000이상은 '좋은습관' 이하는 '나쁜습관'
+        // let walk = Number(prompt('발검음을 적으세요'));
+
+        // if(walk >= 6000){
+        //     alert('좋은습관')
+        // }else{
+        //     alert('나쁜습관')
+        // }
+
+        let user = Number(prompt('걸으무수를 적으세요'));
+
+        if(user >= 6000){
+            alert('좋은습관')
+        }else{
+            alert('나쁜습관')
+        }
+
+       
+    </script>
+    
+</body>
+</html>
