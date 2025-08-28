@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스코프(scope)범위</title>
+</head>
+<body>
+
+    <!-- 
+    
+        'var, let, const'차이점
+        1) var,let
+        = 변수를 선언하는 키워드
+        = 값에 변화가 있을때 사용(재할당)
+        = 재선언는 불가능
+ 
+        2) const 
+        = 상수를 선언하는 키워드
+        = 값에 변화가 없을 때 사용
+        = 재선언는 불가능
+
+
+        'var', 'let'의 차이점
+        1) 스코프(scope)범위
+        2) 중복선언
+        3) 호이스팅
+
+        스코프
+        = 유효범위, 모든 식별자(변수 이름, 함수 이름, 클래스 이름)는 자신이 선언된 위치에 의해서 다른 코드가 식별자 자신을 참조할 수 있는 유효범위
+        = 식별자가 유요한 범위
+
+        스코프 종류
+        
+        1) 함수 스코프(Function Scope)
+        = 기본적으로 'var'키워드는 '함수 스코프'
+        = '함수 내부에서만 접근'이 가능하다
+        = 함수 밖에서 출력을 하면 오류발생
+
+        2) 블록 스코프(Block Scope)
+        = 'let' 키워드는 '블록 스코프'
+        = ''{}'안에 정의 되어 있는 것'이 '블록 스코프'
+        = 같은 스코프안(같은 범위)에 있어야 출력이 가능하다
+
+        3) 전역 스코프(Global Scope)
+        = 만약에 변수가 어느 함수에도 속하지 않는 '최상위 함수 외부에 선언된 변수'라면 '전역스코프'를 가진다
+
+        호이스팅
+        = 자바스크립트에서 변수나 함수 선언이 코드 맨 위로 끌어올려지는 것처럼 동작하는 현상
+    -->
+
+     <script>
+        // var : 함수 스코프
+        // function varScope(){
+        //     if(true){
+        //         var x = 'hi';
+        //     }
+        //     console.log(x);
+        // }
+        // varScope(); // hi
+
+        // function  varScope(){
+        //     if(true){
+        //         var  x = 'hi';
+        //     }
+        //     document.write(x);
+        // }
+        // varScope();
+
+
+
+
+        // let : 블록 스코프
+        // function letScope(){
+        //     for(let i = 0; i < 2; i++){
+        //         console.log(i); // 0 , 1
+        //     }
+        //     console.log(i); // Uncaught ReferenceError : 'let'스코프의 범위를 벗어나서
+        // }
+        // letScope();
+
+        // function letScope(){
+        //     for(let i = 0; i < 6; i++){
+        //         document.write(i);
+        //     }
+        // }
+        // letScope();
+
+
+
+
+        // 중복선언 : var = 함수스코프 단점 : 오류가 발생하지 않고  같은 변수 이름으로 하면 덮어 버리기 때문에 그전 코드는 사라진다
+        // var z = 'hello';
+        // var z = 'hi';
+        // console.log(z); // hi
+
+        
+
+
+
+        // // 중복선언 : let = 블록스코프 'Uncaught SyntaxError'라는 문구로 오류가 발생하고 원인을 알수 있다
+        // let y = 'hello';
+        // let y = 'hi';
+        // console.log(y); // hi
+
+        // let z = 'hello';
+        // let z = 'hi';
+        // console.log(z);
+
+
+
+        // 호이스팅 : var
+        // console.log(num); // undefined : var num; 이런식으로 되어 있는 상태라서 'undefined'으로 출력 / 호이스팅은 된다
+
+        // var num = 10;
+
+        // console.log(num); // 10 : var num = 10;이라는 값을 할당을 했기 떄문에 출력이 된다
+
+        //----------------------------------------------------------------------------------------------//
+
+        // console.log(num);
+
+        // var num = 10;
+
+        // console.log(num);
+
+
+        
+
+        // 호이스팅 : let
+        console.log(num); // 오류 : TDJ(js에서는 들어가면 오류가 발생)에 들어갔기 때문에 오류/ 좀더 엄격하고 안전하게 코드 작성할 수 있다
+
+        let num = 20
+
+        console.log(num);// 오류 : TDJ(js에서는 들어가면 오류가 발생)에 들어갔기 때문에 오류/ 좀더 엄격하고 안전하게 코드 작성할 수 있다
+
+        //----------------------------------------------------------------------------------------------//
+
+       
+        
+     </script>
+    
+</body>
+</html>
