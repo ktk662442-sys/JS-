@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+
+    <!-- 
+        'let a = 21 : a에게 21의 값을 넣는다'라는 뜻 
+    -->
+
+    <script>
+        // text_1
+        // 1 ~ 100까지 출력 : for문(반복문)
+        // 짝수만 출력 : if(조건문) + continue
+        // 50을 넘으면 출력하지 않고 종료 : if(조건문) + break;
+
+        // for(let i = 1; i <= 100; i++){
+        //     if(i % 2 == 1){
+        //         continue;
+        //     }else if(i >= 50){
+        //         break;
+        //     }
+
+        //     console.log(i);
+        // }
+
+
+        // for(let i = 1; i <= 100; i++){
+        //     if(i % 2 === 1){
+        //         continue
+        //     }else if(i >= 50){
+        //         break;
+        //     }
+
+        //     document.write(i + '<br>');
+        // }
+
+
+
+        // text_2
+        // 1~30까지 출력 : for(반복문)
+        // 숫자 중에서 3의 배수를 출력 : if(조건문)
+        // 21은 건너뛰기 : 'continue'
+        // 24가 출력되면 반복문은 종료 else if(조거문) + break
+
+        // for(i = 1; i <= 30; i++){
+        //     if(i % 3 !== 0){ // '!'부정적 의미 : 즉 '3'을 나눴을 때 0으로 더러어지지 않으면 'continue'으로 출력하지 않고 건너띄기
+        //         continue;
+        //     } 
+        //     if(i == 21){
+        //         continue;
+        //     }
+        //     if(i == 24){
+        //         break;
+        //     }
+        //     document.write(i);
+        // }
+
+        for(let i = 1; i <= 30; i++){
+            if(i % 3 !== 0){
+                continue;
+            }else if(i === 21){
+                continue;
+            }else if(i === 24){
+                break;
+            }else{
+                document.write(i + "<br>");
+            }            
+        }
+        
+
+       
+    </script>
+    
+</body>
+</html>

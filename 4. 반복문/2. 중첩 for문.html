@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. 중첩 for문</title>
+</head>
+<body>
+
+    <!-- 
+        2. 중첩 for문
+        = for문 안에 for문이 있는 형태
+        = 바깥쪽에 있는 for문이 종료되어야 안쪽 for문도 종료
+        = 안에있는 for문은 바깥쪽 for문이 종료 될때 까지 계속 돌아간다
+        = 기본문법
+            for(let i = 0; i < 5; i++){
+                for(let j = 0; j <= 5; j++){
+                    // 반복처리 코드
+                }
+            }
+
+    -->
+
+    <script>
+        // text_1 '*'으로 정사각형
+        // for(i = 1; i <= 5; i++){
+        //     for(j = 1; j <= 5; j++){
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+
+        //  for(let i = 1; i <= 5; i++){
+        //     for(let n = 1; n <= 5; n++){
+        //         document.write('*')
+        //     }
+        //     document.write('<brw>')
+        //  }
+
+        // text_2 '*'으로 삼각형
+        // for(i = 1; i <= 5; i++){
+        //     for(j = 1; j <= i; j++){
+        //         document.write('*');
+        //     }
+        //         document.write('<br>');
+        // }
+
+        for(let i = 1; i <= 5; i++){
+            for(let n = 1; n <= i; n++){
+                document.write('*')
+            }
+
+            document.write('<br>')
+        }
+
+       
+
+       
+    </script>
+    
+</body>
+</html>
