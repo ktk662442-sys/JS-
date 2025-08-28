@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM이란</title>
+    <style>
+        .bg{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        DOM(Document Object Model)
+        = html/xml 문서를 브라우저가 이해할 수 있는 구조로 변환하는 모델
+        = 웹페이지는 html로 작성된 요소로 구성되면 DOM은 트리 형태로 변환
+        = DOM tree html 문서의 구조를 트리형태로 표현
+        = 노드(Node)는 DOM 트리의 기본 : 문서, 요소, 텍스트 노드, 속성 노드, 주석 노드, 루트 노드
+            ex)
+                <div class="green">Hello</div>
+                - 요소노드 : <div>
+                - 속성노드 : class="green"
+                - 텍스트 노드 : Hello
+
+        = html 문서는 html 요소들의 집합, html요소는 중첩 관계를 갖고 있다
+        = html 요소간의 관계를 반영하여 html 문서의 구성요소인 html 요소를 객체화한 모든 노드 객체들을 트리자료로 구성
+        = 하나의 최상위 노드에서 시작 => 'document'가 문서 노드, 최상위 구조는 부모 노드가 없음 : '루트 노드'
+            => html태그, 루트 노드는 0개 이상의 자식 노드를 가지고, 자식 노드가 없는 노드는 : '리프 노드'
+
+        요소값 가저오기
+        1) getElementById : html에서 'id'태그 선택자를 가지고 온다
+
+        2) parent.childNodes : 요소 타입의 노드들만 반환
+        = parent : 부모요소
+        = childNodes : html 요소 안에 있는 자식 노드들을 전체를 가져오는 속성
+
+        3)자식요소
+        = firstElementChild : 첫번째 자식 요소
+        = lastElementChild : 마지막 자식 요소
+
+        4)부모요소 
+        = nextElementSibling : 부모의 이후 형제 / 태그 바로 다음에 있는 형제 태그
+          ex)
+                <div id="a">A</div>
+                <div id="b">B</div>
+                <div id="c">C</div>
+
+                const a = document.getElementById('a');
+                const b = a.nextElementSibling;
+                console.log(b);\
+                출력값 : <div id="b">B</div>
+
+        = previousElementSibling : 부모 이전 형제
+        = parentElement : 부모 노드 중 요소 노드만을 반환 ex) ul#color
+        = parentNode : ul 부모 노드를 반환
+
+
+
+        .querySelector('.box' or '#box'); //1개의 요소만 가져올 때
+        .querySelectorAll('.box'); //중복된 클래스 값을 가지고 있는 2개 이상의 모든 요소를 가져올 때
+        .getElementsByClassName('box'); //class로 요소를 가져올 때
+        .getElementsByTagName('div'); //태그로 요소를 가져올 때
+
+
+
+        innerHTML, innerText => dom요소의 내용을 읽거나 수정할 때 사용
+        = innerHTML : html 태그 포함한 콘텐츠를 반환하거나 설정
+        = innerText : 사람이 보게 되는 텍스트만 반환 
+
+
+        5) 속성값  가져오기
+        = console.log(myImg.getAttribute('src')); //경로 문자열로 반환
+        = console.log(myImg.getAttribute('alt')); //속성은 있는데 속성값이 없으면 빈문자열
+        = console.log(myImg.getAttribute('loop')); //속성이 아예 없으면 null
+
+        6) 속성 존재여부 체크
+        = console.log(myImg.hasAttribute('src')); //true
+        = console.log(myImg.hasAttribute('loop')); //false
+
+        7) 요소 만들기
+        (1) createElement : HTML 문서에 새로운 태그를 자바스크립트에서 만들기 위한 함수
+        = 즉 자바스크립트에서 html요소를 새로 만드는 함수
+        = 속성 (class, id) : setAttribute() 사용
+        = 태그 (div, section...) : createElement() 사용
+        
+        (2) appendChild : 자바스크립튿에서 만든 html요소를 실제 html 문서(화면)에 붙이는 것
+
+        (3) removeAttribute : html 요소에 적용되어 있는  속성을 제거하는 메서드
+
+        (4) toggleAttribute : html 요소의 속성을 토글(켜고/끄기)하는 메서드 / 즉 표시하거나&지우기
+
+        (5) setAttribute : 자바스크립트에서 html 요소에 속성을 추가하거나 바꿀 때 사용
+        = setAttribute('바꾸고 싶은 속성', '바꾸고 싶은 값');
+`    -->
+
+    <ul id="color">
+        <ul id="red">red</ul>
+        <ul id="blue">blue</ul>
+        <ul id="green">green</ul>
+    </ul>
+
+        <div id="box"><strong>굵은 글씨</strong></div>
+
+        <div id="box2"><strong>굵은 글씨</strong></div>
+
+        <img src="img3.jpg" alt=""> 
+        
+    <script>
+        // const parent = document.getElementById('color');  
+
+        // const childNodes = parent.childNodes
+
+        // const firstChild = parent.firstElementChild;
+        
+        // const lastChild = parent.lastElementChild;
+
+        // const nextSibling = parent.nextElementSibling;
+
+        // const previousSibling = parent.previousElementSibling;
+
+
+
+        // const parentElement = firstChild.parentElement;
+        // const parentNode = firstChild.parentNode;
+
+
+        // const box = document.querySelector('.box' or '#box'); //1개의 요소만 가져올 때
+        // const box = document.querySelectorAll('.box'); //중복된 클래스 값을 가지고 있는 2개 이상의 모든 요소를 가져올 때
+        // const box = document.getElementsByClassName('box'); //class로 요소를 가져올 때
+
+        // const box2 = document.getElementById('box2');
+
+        //     console.log(box2.innerText);
+
+        //     box2.innerText = '<em>기울임 글씨</em>';
+    </script>
+    
+</body>
+</html>
