@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text</title>
+</head>
+<body>
+    
+    <script>
+        // text_1
+        // 변수 num1, num2가 매개변수로 주어질 깨 num1를 num2로 나눈 나머지 'return'하도록 'solution' 함수를 완성
+        // 제한사항 
+        // num1이 3 num2가 2이므로 3을 2로 나눈 나머지 1을 return 합니다 
+        // num1이 10 num2가 5이므로 10을 5로 나눈 나머지 0을 return 합니다 
+
+        // function solution(num1,num2){
+        //     return num1 % num2;   
+        // }
+        // console.log(solution(3,2)); // 1
+        // console.log(solution(10,5)); // 0
+
+
+        // function name(num1,num2){
+        //     return num1 % num2;
+        // }
+        // document.write(name(3,2) + '<br>')
+        // document.write(name(10,5))
+
+
+
+
+
+        // text_2
+        // 정수 num1과 num2가 매개변수로 주어집니다 두 수가 같은면 '1' 다르면  '-1'을 return하도록 solution함수를 완성
+        // 제한사항
+        // num1이 2이고 num2가 3이므로 다릅니다 따라서 -1을 return합니다
+        // num1이 11이고 num2가 11이므로 같습니다 따라서 1을 return합니다
+        // num1이 7이고 num2가 99이므로 다릅니다 따라서 -1을 return합니다
+
+        // function solution_1(num1,num2){
+        //     if(num1 % num2){
+        //         return -1;
+        //     }else{
+        //         return 1;
+        //     }
+        // }
+        // console.log(solution_1(2,3)); // -1
+        // console.log(solution_1(11,11)); // 1
+        // console.log(solution_1(7,99)); // -1
+
+        // function name(num1,num2){
+        //     if(num1 === num2){
+        //         return 1;
+        //     }else{
+        //         return -1;
+        //     }
+        // }
+        // document.write(name(2,3) + "<br>");
+        // document.write(name(11,11) + "<br>");
+        // document.write(name(7,99) + "<br>");
+
+
+
+        // text_3 : 구구단 함수
+        // function gugu(){
+        //     for(let i = 2; i <= 9; i++){
+        //         document.write(`${i} 단<br>`);
+        //         for(let n = 1; n <= 9; n++){
+        //             document.write(`${i} X ${n} = ${i * n} <br>`);
+        //         }
+        //     }
+        // }
+        // gugu();
+
+        function gugu(){
+             for(let i = 2; i <= 9; i++){
+                 document.write(`${i} 단<br>`);
+                 for(let n = 1; n <= 9; n++){
+                     document.write(`${i} X ${n} = ${i * n} <br>`);
+                 }
+             }
+        }
+        gugu();
+
+
+        
+    </script>
+    
+</body>
+</html>
